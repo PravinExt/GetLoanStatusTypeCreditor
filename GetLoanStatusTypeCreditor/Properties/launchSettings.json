@@ -1,0 +1,33 @@
+{
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:51605/",
+      "sslPort": 0
+    }
+  },
+  "profiles": {
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
+    "GetLoanStatusTypeCreditor": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "http://localhost:51606/"
+    },
+    "Mock Lambda Test Tool": {
+      "commandName": "Executable",
+      "commandLineArgs": "--port 5050",
+      "workingDirectory": ".\\bin\\$(Configuration)\\netcoreapp2.1",
+      "executablePath": "%USERPROFILE%\\.dotnet\\tools\\dotnet-lambda-test-tool-2.1.exe"
+    }
+  }
+}
