@@ -1,1 +1,1 @@
-Read Details
+Read Details info
