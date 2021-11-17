@@ -43,5 +43,5 @@ steps:
     packageOnly: false
     lambdaProjectPath: './GetLoanStatusTypeCreditor'
     stackName: 'GetLoanStatusTypeCreditor'
-    s3Bucket: 'GetLoanStatusTypeCreditorbkt'
+    s3Bucket: 'pblambdafunctions'
     s3Prefix: 'GetLoanStatusTypeCreditor'
