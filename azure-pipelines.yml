@@ -13,28 +13,6 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
-- script: | 
-    dotnet restore GetLoanStatusTypeCreditor.sln
-    ls
-  displayName: 'dotnet restore'
-
-
-- script: | 
-    dotnet build GetLoanStatusTypeCreditor.sln
-    ls
-    cd /home/vsts/work/1/s/GetLoanStatusTypeCreditor/bin/Debug/netcoreapp2.1/
-    ls -al
-    pwd
-  displayName: 'dotnet build'
-
-- task: ArchiveFiles@2
-  inputs:
-    rootFolderOrFile: '/home/vsts/work/1/s/GetLoanStatusTypeCreditor/bin/Debug/netcoreapp2.1/'
-    includeRootFolder: true
-    archiveType: 'zip'
-    archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
-    replaceExistingArchive: true
-    
 - task: LambdaNETCoreDeploy@1
   inputs:
     awsCredentials: 'awsconnection'
@@ -44,4 +22,3 @@ steps:
     lambdaProjectPath: './GetLoanStatusTypeCreditor'
     stackName: 'GetLoanStatusTypeCreditor'
     s3Bucket: 'pblambdafunctions'
-    s3Prefix: 'GetLoanStatusTypeCreditor'
